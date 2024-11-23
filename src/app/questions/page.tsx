@@ -1,16 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import {Button} from "antd";
-import {listQuestionBankQuestionByPageUsingPost} from "@/api/questionBankQuestionController";
-import {listQuestionBankVoByPageUsingPost} from "@/api/questionBankController";
 
 export default function Home() {
-  listQuestionBankVoByPageUsingPost({}).then(res=>{
-    console.log(res)
-  })
   return (
     <main className={styles.main}>
-      <Button type="primary">Primary Button</Button>
+      <Button type="primary">题目</Button>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -36,6 +31,14 @@ export default function Home() {
       </div>
 
       <div className={styles.center}>
+        <Image
+          className={styles.logo}
+          src="/next.svg"
+          alt="Next.js Logo"
+          width={180}
+          height={37}
+          priority
+        />
       </div>
 
       <div className={styles.grid}>
