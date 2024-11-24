@@ -18,6 +18,9 @@ import "./index.css";
 import { menus } from "../../../config/menus";
 import { useSelector } from "react-redux";
 import { RootState } from "@/stores";
+import getAccessibleMenus from "@/access/menuAccess";
+import MdEditor from "@/components/MdEditor";
+import MdViewer from "@/components/MdViewer";
 
 // const { token } = theme.useToken();
 // return (
@@ -83,9 +86,6 @@ interface Props {
 
 export default function BasicLayout({ children }: Props) {
   const pathname = usePathname();
-  // listQuestionBankVoByPageUsingPost({}).then(res=>{
-  //     console.log(res)
-  // })
 
   const loginUser = useSelector((state: RootState) => state.loginUser);
 
@@ -162,7 +162,7 @@ export default function BasicLayout({ children }: Props) {
         }}
         onMenuHeaderClick={(e) => console.log(e)}
         menuDataRender={() => {
-          return menus;
+          return getAccessibleMenus(loginUser, menus);
         }}
         //定义了菜单项如何渲染
         menuItemRender={(item, dom) => (
@@ -171,6 +171,7 @@ export default function BasicLayout({ children }: Props) {
           </Link>
         )}
       >
+
         {children}
       </ProLayout>
     </div>

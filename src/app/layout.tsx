@@ -3,10 +3,12 @@ import { AntdRegistry } from "@ant-design/nextjs-registry";
 import "./globals.css";
 import React, { useCallback, useEffect } from "react";
 import BasicLayout from "@/layouts/BasicLayout";
-import {Provider, useDispatch} from "react-redux";
-import stores, {AppDispatch} from "@/stores";
-import {getLoginUserUsingGet} from "@/api/userController";
-import {setLoginUser} from "@/stores/loginUser";
+import { Provider, useDispatch } from "react-redux";
+import stores, { AppDispatch } from "@/stores";
+import { getLoginUserUsingGet } from "@/api/userController";
+import { setLoginUser } from "@/stores/loginUser";
+import AccessLayout from "@/access/AccessLayout";
+import AccessEnum from "@/access/accessEnum";
 
 /**
  * 执行初始化逻辑的布局（多封装一层）
@@ -39,9 +41,9 @@ import {setLoginUser} from "@/stores/loginUser";
  * @constructor
  */
 const InitLayout: React.FC<
-    Readonly<{
-      children: React.ReactNode;
-    }>
+  Readonly<{
+    children: React.ReactNode;
+  }>
 > = ({ children }) => {
   const dispatch = useDispatch<AppDispatch>();
 
@@ -53,10 +55,14 @@ const InitLayout: React.FC<
       dispatch(setLoginUser(res.data));
     } else {
       // todo 测试代码，实际可删除
-      setTimeout(() => {
-        const testUser = { userName: "测试登录", id: 1 };
-        dispatch(setLoginUser(testUser));
-      }, 3000);
+      // setTimeout(() => {
+      //   const testUser = {
+      //     userName: "测试登录",
+      //     id: 1,
+      //     userRole: AccessEnum.ADMIN,
+      //   };
+      //   dispatch(setLoginUser(testUser));
+      // }, 3000);
     }
   }, []);
 
@@ -66,9 +72,6 @@ const InitLayout: React.FC<
 
   return <>{children}</>;
 };
-
-
-
 
 export default function RootLayout({
   children,
@@ -81,7 +84,9 @@ export default function RootLayout({
         <AntdRegistry>
           <Provider store={stores}>
             <InitLayout>
-              <BasicLayout>{children}</BasicLayout>
+              <BasicLayout>
+                <AccessLayout>{children}</AccessLayout>
+              </BasicLayout>
             </InitLayout>
           </Provider>
         </AntdRegistry>
