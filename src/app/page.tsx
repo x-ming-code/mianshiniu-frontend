@@ -5,9 +5,9 @@ import {listQuestionBankQuestionByPageUsingPost} from "@/api/questionBankQuestio
 import {listQuestionBankVoByPageUsingPost} from "@/api/questionBankController";
 
 export default function Home() {
-  listQuestionBankVoByPageUsingPost({}).then(res=>{
-    console.log(res)
-  })
+  // listQuestionBankVoByPageUsingPost({}).then(res=>{
+  //   console.log(res)
+  // })
   return (
     <main className={styles.main}>
       <Button type="primary">Primary Button</Button>

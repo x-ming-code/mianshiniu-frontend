@@ -16,7 +16,8 @@ import Link from "next/link";
 import GlobalFooter from "@/components/GlobalFooter";
 import "./index.css";
 import { menus } from "../../../config/menus";
-import {listQuestionBankVoByPageUsingPost} from "@/api/questionBankController";
+import { useSelector } from "react-redux";
+import { RootState } from "@/stores";
 
 // const { token } = theme.useToken();
 // return (
@@ -82,9 +83,11 @@ interface Props {
 
 export default function BasicLayout({ children }: Props) {
   const pathname = usePathname();
-  listQuestionBankVoByPageUsingPost({}).then(res=>{
-      console.log(res)
-  })
+  // listQuestionBankVoByPageUsingPost({}).then(res=>{
+  //     console.log(res)
+  // })
+
+  const loginUser = useSelector((state: RootState) => state.loginUser);
 
   return (
     <div
@@ -109,9 +112,9 @@ export default function BasicLayout({ children }: Props) {
           pathname,
         }}
         avatarProps={{
-          src: "https://gw.alipayobjects.com/zos/antfincdn/efFD%24IOql2/weixintupian_20170331104822.jpg",
+          src: loginUser.userAvatar || "/assets/login.png",
           size: "small",
-          title: "ming",
+          title: loginUser.userName || "ming",
           render: (props, dom) => {
             return (
               <Dropdown
@@ -145,7 +148,7 @@ export default function BasicLayout({ children }: Props) {
           ];
         }}
         headerTitleRender={(logo, title, _) => {
-         return (
+          return (
             <a>
               {logo}
               {title}
