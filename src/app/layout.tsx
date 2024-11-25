@@ -48,23 +48,15 @@ const InitLayout: React.FC<
   const dispatch = useDispatch<AppDispatch>();
 
   // 初始化全局用户状态
+  // 初始化全局用户状态
   const doInitLoginUser = useCallback(async () => {
-    // 获取用户信息
     const res = await getLoginUserUsingGet();
     if (res.data) {
+      // 更新全局用户状态
       dispatch(setLoginUser(res.data));
-    } else {
-      // todo 测试代码，实际可删除
-      // setTimeout(() => {
-      //   const testUser = {
-      //     userName: "测试登录",
-      //     id: 1,
-      //     userRole: AccessEnum.ADMIN,
-      //   };
-      //   dispatch(setLoginUser(testUser));
-      // }, 3000);
     }
   }, []);
+
 
   useEffect(() => {
     doInitLoginUser();

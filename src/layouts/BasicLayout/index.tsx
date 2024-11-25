@@ -7,36 +7,21 @@ import {
   SearchOutlined,
 } from "@ant-design/icons";
 import { ProLayout } from "@ant-design/pro-components";
-
-import { Dropdown, Input, theme } from "antd";
-import React, { useState } from "react";
+import { Dropdown, Input, message, theme } from "antd";
+import React from "react";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import GlobalFooter from "@/components/GlobalFooter";
-import "./index.css";
-import { menus } from "../../../config/menus";
-import { useSelector } from "react-redux";
-import { RootState } from "@/stores";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "@/stores";
 import getAccessibleMenus from "@/access/menuAccess";
-import MdEditor from "@/components/MdEditor";
-import MdViewer from "@/components/MdViewer";
-
-// const { token } = theme.useToken();
-// return (
-//   <div
-//
-//     style={{
-//       width: "33.33%",
-//     }}
-//   >
-//     <DoubleRightOutlined
-//       style={{
-//         marginInlineStart: 4,
-//       }}
-//     />
-//   </div>
-// )
+import { userLogoutUsingPost } from "@/api/userController";
+import { setLoginUser } from "@/stores/loginUser";
+import "./index.css";
+import { DEFAULT_USER } from "@/app/constants/user";
+import { router } from "next/client";
+import { menus } from "../../../config/menus";
 
 /**
  * 搜索框
@@ -89,6 +74,23 @@ export default function BasicLayout({ children }: Props) {
 
   const loginUser = useSelector((state: RootState) => state.loginUser);
 
+  const dispatch = useDispatch<AppDispatch>();
+  const router = useRouter();
+  /**
+   * 用户注销
+   */
+  const userLogout = async () => {
+    try {
+      await userLogoutUsingPost();
+      message.success("已退出登录");
+      dispatch(setLoginUser(DEFAULT_USER));
+      router.push("/user/login");
+    } catch (e) {
+      message.error("操作失败，" + e.message);
+    }
+    return;
+  }
+
   return (
     <div
       id="basiclayout"
@@ -116,6 +118,18 @@ export default function BasicLayout({ children }: Props) {
           size: "small",
           title: loginUser.userName || "ming",
           render: (props, dom) => {
+            if (!loginUser.id) {
+              return (
+                  <div
+                      onClick={() => {
+                        router.push("/user/login");
+                      }}
+                  >
+                    {dom}
+                  </div>
+              );
+            }
+
             return (
               <Dropdown
                 menu={{
@@ -126,6 +140,12 @@ export default function BasicLayout({ children }: Props) {
                       label: "退出登录",
                     },
                   ],
+                  onClick: async (event: { key: React.Key }) => {
+                    const { key } = event;
+                    if (key === "logout") {
+                      userLogout();
+                    }
+                  },
                 }}
               >
                 {dom}
@@ -133,6 +153,9 @@ export default function BasicLayout({ children }: Props) {
             );
           },
         }}
+
+
+
         actionsRender={(props) => {
           if (props.isMobile) return [];
           return [
@@ -171,7 +194,6 @@ export default function BasicLayout({ children }: Props) {
           </Link>
         )}
       >
-
         {children}
       </ProLayout>
     </div>

@@ -4,29 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66f3af1e-5292-4003-943c-331e6ea1e252" name="变更" comment="全局状态管理">
-      <change afterPath="$PROJECT_DIR$/src/access/AccessLayout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/access/accessEnum.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/access/checkAccess.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/access/menuAccess.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MdEditor/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MdEditor/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MdViewer/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MdViewer/index.tsx" afterDir="false" />
+    <list default="true" id="66f3af1e-5292-4003-943c-331e6ea1e252" name="变更" comment="通用模板改造完成">
+      <change afterPath="$PROJECT_DIR$/src/app/admin/bank/components/CreateModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/admin/bank/components/UpdateModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/admin/bank/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/admin/bank/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/admin/question/components/CreateModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/admin/question/components/UpdateBankModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/admin/question/components/UpdateModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/admin/question/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/admin/question/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/admin/user/components/CreateModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/admin/user/components/UpdateModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/admin/user/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/admin/user/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/constants/user.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/user/login/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/user/login/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/user/register/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/user/register/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TagList/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TagList/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/menus.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/config/menus.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/banks/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/banks/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/questions/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/questions/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/questions/page.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/questions/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/questions/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/BasicLayout/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BasicLayout/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/BasicLayout/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BasicLayout/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/stores/loginUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/loginUser.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +78,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/Code/mianshiniu/mianshiniu-frontend/src/app/questions",
+    "last_opened_file_path": "D:/Code/mianshiniu/mianshiniu-frontend/src/app/admin",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -88,11 +92,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Code\mianshiniu\mianshiniu-frontend\src\app\questions" />
-      <recent name="D:\Code\mianshiniu\mianshiniu-frontend\src\components\MdViewer" />
-      <recent name="D:\Code\mianshiniu\mianshiniu-frontend\src\components\GlobalFooter" />
+      <recent name="D:\Code\mianshiniu\mianshiniu-frontend\src\app\admin" />
+      <recent name="D:\Code\mianshiniu\mianshiniu-frontend\src\components" />
       <recent name="D:\Code\mianshiniu\mianshiniu-frontend\src\app" />
-      <recent name="D:\Code\mianshiniu\mianshiniu-frontend\src\app\banks" />
+      <recent name="D:\Code\mianshiniu\mianshiniu-frontend\src\app\user" />
+      <recent name="D:\Code\mianshiniu\mianshiniu-frontend\src\app\user\login" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Code\mianshiniu\mianshiniu-frontend\public\assets" />
@@ -147,7 +151,9 @@
       <workItem from="1732331826833" duration="3311000" />
       <workItem from="1732350181764" duration="15774000" />
       <workItem from="1732424861553" duration="10852000" />
-      <workItem from="1732449215357" duration="2992000" />
+      <workItem from="1732449215357" duration="3026000" />
+      <workItem from="1732523596119" duration="775000" />
+      <workItem from="1732535122206" duration="5806000" />
     </task>
     <task id="LOCAL-00001" summary="前端初始化完成">
       <option name="closed" value="true" />
@@ -173,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732436124365</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="通用模板改造完成">
+      <option name="closed" value="true" />
+      <created>1732456578203</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732456578203</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,7 +208,8 @@
     <MESSAGE value="前端初始化完成" />
     <MESSAGE value="前端 11.23&#10;1.全局通用布局&#10;2.请求配置加api接口" />
     <MESSAGE value="全局状态管理" />
-    <option name="LAST_COMMIT_MESSAGE" value="全局状态管理" />
+    <MESSAGE value="通用模板改造完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="通用模板改造完成" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
