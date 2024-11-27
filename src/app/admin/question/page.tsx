@@ -160,6 +160,7 @@ const QuestionAdminPage: React.FC = () => {
           <Typography.Link
             onClick={() => {
               setCurrentRow(record);
+              console.log(record)
               setUpdateBankModalVisible(true);
             }}
           >

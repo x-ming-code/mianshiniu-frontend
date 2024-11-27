@@ -16,9 +16,9 @@ export const menus = [
     name: "题目",
   },
   {
-    path: "/daiding",
-    name: "待定",
-    target: "_blank",
+    path: "/md",
+    name: "说明",
+   // target: "_blank",
   },
   {
     path: "/admin",

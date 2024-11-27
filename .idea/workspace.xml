@@ -4,32 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66f3af1e-5292-4003-943c-331e6ea1e252" name="变更" comment="通用模板改造完成">
-      <change afterPath="$PROJECT_DIR$/src/app/admin/bank/components/CreateModal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/admin/bank/components/UpdateModal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/admin/bank/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/admin/bank/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/admin/question/components/CreateModal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/admin/question/components/UpdateBankModal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/admin/question/components/UpdateModal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/admin/question/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/admin/question/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/admin/user/components/CreateModal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/admin/user/components/UpdateModal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/admin/user/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/admin/user/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/constants/user.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/user/login/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/user/login/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/user/register/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/user/register/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TagList/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TagList/index.tsx" afterDir="false" />
+    <list default="true" id="66f3af1e-5292-4003-943c-331e6ea1e252" name="变更" comment="admin用户 题目 题库完成">
+      <change afterPath="$PROJECT_DIR$/src/app/bank/[questionBankId]/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/bank/[questionBankId]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/bank/[questionBankId]/question/[questionId]/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/bank/[questionBankId]/question/[questionId]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/md/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/md/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/question/[questionId]/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/question/[questionId]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/QuestionBankList/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/QuestionBankList/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/QuestionCard/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/QuestionCard/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/QuestionList/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/QuestionList/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/QuestionTable/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/QuestionTable/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/BasicLayout/components/SearchInput/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/layouts/BasicLayout/components/SearchInput/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/menus.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/config/menus.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/questionBankController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/questionBankController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin/question/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin/question/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/banks/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/banks/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/banks/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/banks/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/questions/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/questions/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/questions/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/questions/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/BasicLayout/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/BasicLayout/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,33 +75,33 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/Code/mianshiniu/mianshiniu-frontend/src/app/admin",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "D:\\Code\\mianshiniu\\mianshiniu-frontend\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "D:\\Code\\mianshiniu\\mianshiniu-frontend\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Code/mianshiniu/mianshiniu-frontend/src/app/md&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Code\\mianshiniu\\mianshiniu-frontend\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Code\\mianshiniu\\mianshiniu-frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Code\mianshiniu\mianshiniu-frontend\src\app\admin" />
-      <recent name="D:\Code\mianshiniu\mianshiniu-frontend\src\components" />
+      <recent name="D:\Code\mianshiniu\mianshiniu-frontend\src\app\md" />
+      <recent name="D:\Code\mianshiniu\mianshiniu-frontend\src\layouts\BasicLayout" />
+      <recent name="D:\Code\mianshiniu\mianshiniu-frontend\src\app\questions" />
       <recent name="D:\Code\mianshiniu\mianshiniu-frontend\src\app" />
-      <recent name="D:\Code\mianshiniu\mianshiniu-frontend\src\app\user" />
-      <recent name="D:\Code\mianshiniu\mianshiniu-frontend\src\app\user\login" />
+      <recent name="D:\Code\mianshiniu\mianshiniu-frontend\src\app\banks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Code\mianshiniu\mianshiniu-frontend\public\assets" />
@@ -153,7 +158,11 @@
       <workItem from="1732424861553" duration="10852000" />
       <workItem from="1732449215357" duration="3026000" />
       <workItem from="1732523596119" duration="775000" />
-      <workItem from="1732535122206" duration="5806000" />
+      <workItem from="1732535122206" duration="8491000" />
+      <workItem from="1732621112164" duration="827000" />
+      <workItem from="1732622014619" duration="1507000" />
+      <workItem from="1732624147623" duration="5707000" />
+      <workItem from="1732694734660" duration="3227000" />
     </task>
     <task id="LOCAL-00001" summary="前端初始化完成">
       <option name="closed" value="true" />
@@ -187,7 +196,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732456578203</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="admin用户 题目 题库完成">
+      <option name="closed" value="true" />
+      <created>1732543205127</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732543205127</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +226,8 @@
     <MESSAGE value="前端 11.23&#10;1.全局通用布局&#10;2.请求配置加api接口" />
     <MESSAGE value="全局状态管理" />
     <MESSAGE value="通用模板改造完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="通用模板改造完成" />
+    <MESSAGE value="admin用户 题目 题库完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin用户 题目 题库完成" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

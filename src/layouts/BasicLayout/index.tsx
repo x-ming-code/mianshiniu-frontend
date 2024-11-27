@@ -1,81 +1,40 @@
 "use client";
-import {
-  GithubFilled,
-  InfoCircleFilled,
-  LogoutOutlined,
-  QuestionCircleFilled,
-  SearchOutlined,
-} from "@ant-design/icons";
+import { GithubFilled, LogoutOutlined } from "@ant-design/icons";
 import { ProLayout } from "@ant-design/pro-components";
-import { Dropdown, Input, message, theme } from "antd";
+import { Dropdown, message } from "antd";
 import React from "react";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 import GlobalFooter from "@/components/GlobalFooter";
+
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/stores";
 import getAccessibleMenus from "@/access/menuAccess";
 import { userLogoutUsingPost } from "@/api/userController";
 import { setLoginUser } from "@/stores/loginUser";
-import "./index.css";
-import { DEFAULT_USER } from "@/app/constants/user";
-import { router } from "next/client";
-import { menus } from "../../../config/menus";
 
-/**
- * 搜索框
- * @constructor
- */
-const SearchInput = () => {
-  const { token } = theme.useToken();
-  return (
-    <div
-      key="SearchOutlined"
-      aria-hidden
-      style={{
-        display: "flex",
-        alignItems: "center",
-        marginInlineEnd: 24,
-      }}
-      onMouseDown={(e) => {
-        e.stopPropagation();
-        e.preventDefault();
-      }}
-    >
-      <Input
-        style={{
-          borderRadius: 4,
-          marginInlineEnd: 12,
-          // backgroundColor: token.colorBgTextHover,
-        }}
-        prefix={
-          <SearchOutlined
-            style={
-              {
-                // color: token.colorTextLightSolid,
-              }
-            }
-          />
-        }
-        placeholder="搜索题目"
-        variant="borderless"
-      />
-    </div>
-  );
-};
+import SearchInput from "@/layouts/BasicLayout/components/SearchInput";
+import "./index.css";
+import {menus} from "../../../config/menus";
+import {DEFAULT_USER} from "@/app/constants/user";
 
 interface Props {
   children: React.ReactNode;
 }
 
+/**
+ * 全局通用布局
+ * @param children
+ * @constructor
+ */
 export default function BasicLayout({ children }: Props) {
   const pathname = usePathname();
-
+  // 当前登录用户
   const loginUser = useSelector((state: RootState) => state.loginUser);
-
   const dispatch = useDispatch<AppDispatch>();
   const router = useRouter();
+
   /**
    * 用户注销
    */
@@ -88,12 +47,11 @@ export default function BasicLayout({ children }: Props) {
     } catch (e) {
       message.error("操作失败，" + e.message);
     }
-    return;
-  }
+  };
 
   return (
     <div
-      id="basiclayout"
+      id="basicLayout"
       style={{
         height: "100vh",
         overflow: "auto",
@@ -107,29 +65,28 @@ export default function BasicLayout({ children }: Props) {
             src="/assets/log.png"
             height={32}
             width={32}
-            alt="面试牛刷题平台"
+            alt="面试牛刷题网站"
           />
         }
         location={{
           pathname,
         }}
         avatarProps={{
-          src: loginUser.userAvatar || "/assets/login.png",
+          src: loginUser.userAvatar || "/assets/log.png",
           size: "small",
-          title: loginUser.userName || "ming",
+          title: loginUser.userName || "面试牛",
           render: (props, dom) => {
             if (!loginUser.id) {
               return (
-                  <div
-                      onClick={() => {
-                        router.push("/user/login");
-                      }}
-                  >
-                    {dom}
-                  </div>
+                <div
+                  onClick={() => {
+                    router.push("/user/login");
+                  }}
+                >
+                  {dom}
+                </div>
               );
             }
-
             return (
               <Dropdown
                 menu={{
@@ -153,14 +110,10 @@ export default function BasicLayout({ children }: Props) {
             );
           },
         }}
-
-
-
         actionsRender={(props) => {
           if (props.isMobile) return [];
           return [
-            <InfoCircleFilled key="InfoCircleFilled" />,
-            <QuestionCircleFilled key="QuestionCircleFilled" />,
+            <SearchInput key="search" />,
             <a
               key="github"
               href="https://github.com/x-ming-code/mianshiniu-backend"
@@ -178,16 +131,16 @@ export default function BasicLayout({ children }: Props) {
             </a>
           );
         }}
-        //可选menuFooterRender={}菜单栏底部样式
-        //footerRender={}底部栏样式
+        // 渲染底部栏
         footerRender={() => {
           return <GlobalFooter />;
         }}
         onMenuHeaderClick={(e) => console.log(e)}
+        // 定义有哪些菜单
         menuDataRender={() => {
           return getAccessibleMenus(loginUser, menus);
         }}
-        //定义了菜单项如何渲染
+        // 定义了菜单项如何渲染
         menuItemRender={(item, dom) => (
           <Link href={item.path || "/"} target={item.target}>
             {dom}
